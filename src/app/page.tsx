@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 
@@ -18,7 +19,7 @@ export default function Home() {
 
       <p>Bu konularda soruların varsa veya kendi ürünün hakkında konuşmak istersen müsait günlerime bakabilirsin.</p></div>
       <div className="site-4xl-container mt-20">
-        <img src='/rdlogo.webp' alt="" />
+        <Image src='/rdlogo.webp' alt="" />
       </div>
     </>
   );

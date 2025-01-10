@@ -5,22 +5,10 @@
 import Link from 'next/link'
 import React from 'react'
 import { useUser } from '@auth0/nextjs-auth0/client';
+import Image from 'next/image';
 
-function page() {
-    const posts=[
-        {
-            header:' Anasayfa,Blogs,Hakkimda',
-            name:'Rad-blogs',
-            date:'07/01/2025',
-            url:'blogs/recep'
-        },
-        {
-            header:'osman',
-            name:'osman demir ',
-            date:'07/01/2025',
-            url:'blogs/osman'
-        }
-    ]
+function Page() {
+   
     const { user } = useUser();
     console.log(user)
 
@@ -32,8 +20,8 @@ function page() {
             <hr /><hr /><hr />
             <div className='space-x-4'>
       <div style={{display:'flex'}} className='space-x-3'>
-        
-      {user && user.picture ? (<img style={{ border: '1px solid black', borderRadius: '50%', width:'30px', height:'30px'}} src={user.picture}></img> ) : "Giris yapilmadi"}
+
+      {user && user.picture ? (<Image style={{ border: '1px solid black', borderRadius: '50%', width:'30px', height:'30px'}} src={user.picture} alt=''></Image> ) : "Giris yapilmadi"}
       {user && user.name ? (<span>{user.name}</span> ) : ""}
      
         <Link href='/api/auth/login'>Login</Link>
@@ -50,4 +38,4 @@ function page() {
     )
 }
 
-export default page
+export default Page
