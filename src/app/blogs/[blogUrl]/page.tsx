@@ -11,7 +11,15 @@ export default async function Page({
     const { default: Post } = await import(`@/content/${blogUrl}.mdx`)
 
     if (gecerliUrller.includes(blogUrl))
-        return <div className='site-container'>My Post:<Post /></div>
+        return <div className='site-container'>My Post:<Post />
+       
+        
+        
+        </div>
+       
     else
         notFound()
+
+
+
 }
